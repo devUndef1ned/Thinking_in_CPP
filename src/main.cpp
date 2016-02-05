@@ -10,7 +10,9 @@
 int main(){
 
 	//exc3_2();
-	exc3_6();
+	//exc3_6();
+	//exc3_7();
+	exc3_15();
 
 	return 0;
 }
