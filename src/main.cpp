@@ -5,15 +5,12 @@
  *      Author: Юыху
  */
 
-#include <conio.h>
-
 #include "Chapter3/chapter3.h"
 
 int main(){
 
-	exc3_2();
-
-	getch();
+	//exc3_2();
+	exc3_6();
 
 	return 0;
 }

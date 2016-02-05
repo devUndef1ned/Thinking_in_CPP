@@ -4,7 +4,7 @@
 #define CHAPTER3_CHAPTER3_H_
 
 void exc3_2();
-void exc3_3();
+void exc3_6();
 
 
 
