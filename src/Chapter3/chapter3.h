@@ -9,6 +9,7 @@ void exc3_7();
 void exc3_15();
 void exc3_18();
 void exc3_25();
+void exc3_32();
 
 
 

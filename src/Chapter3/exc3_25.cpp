@@ -24,10 +24,10 @@ void printBinary(const unsigned char val, int part){
 						cout << " - mantissa\n" << endl; break;
 					case 31:
 						cout << " - sign\n"; break;
-					case 23:
-						cout << " - order\n"; break;
 					case 22:
-						cout << " - point\n"; break;
+						cout << " - order\n"; break;
+					//case 22:
+						//cout << " - point\n"; break;
 					}
 	}
 }
@@ -47,7 +47,7 @@ void exc3_25(){
 
 	float a = .0001;
 	printFloatBinary(a);
-	a = 4;
+	a = 6.25;
 	printFloatBinary(a);
 
 }
