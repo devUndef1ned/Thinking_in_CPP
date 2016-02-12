@@ -47,7 +47,7 @@ void exc3_25(){
 
 	float a = .0001;
 	printFloatBinary(a);
-	a = 6.25;
+	a = .25;
 	printFloatBinary(a);
 
 }

@@ -6,6 +6,7 @@
  */
 
 #include "Chapter3/chapter3.h"
+#include "Chapter4/chapter4.h"
 
 int main(){
 
@@ -14,7 +15,9 @@ int main(){
 	//exc3_7();
 	//exc3_15();
 	//exc3_18();
-	exc3_25();
+	//exc3_25();
+
+	exc4_4();
 
 	return 0;
 }
