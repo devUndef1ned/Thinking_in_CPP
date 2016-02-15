@@ -19,16 +19,16 @@ void func2(X*);
 struct X{
 
 	int a;
-	::func1();
-	::func2();
+	void func1(X*, int);
+	void func2(X*);
 };
 
-void ::func1(X* ptr_x, int i){
+void func1(X* ptr_x, int i){
 
 	ptr_x->a = i;
 }
 
-void ::func2(X* ptr_x){
+void func2(X* ptr_x){
 
 	cout << "X.a = " << ptr_x->a << endl;
 }
