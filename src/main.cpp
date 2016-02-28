@@ -18,7 +18,8 @@ int main(){
 	//exc3_25();
 	//exc3_32();	
 	//exc4_4();
-	exc4_7();
+	//exc4_7();
+	exc4_8();
 
 	return 0;
 }
