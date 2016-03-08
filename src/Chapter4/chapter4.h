@@ -23,18 +23,7 @@ struct Stash{
 	void inflate(int increase);
 };
 
-struct Stack {
-	struct Link{
-		void* data;
-		Link* next;
-		void initialize(void* dat, Link* nxt);
-	}* head;
-	void initialize();
-	void push(void* dat);
-	void* peek();
-	void* pop();
-	void cleanup();
-};
+struct Stack;
 
 void exc4_4();
 void exc4_7();

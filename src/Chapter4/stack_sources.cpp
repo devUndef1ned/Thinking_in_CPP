@@ -7,6 +7,19 @@
 #include "chapter4.h"
 #include <cassert>
 
+struct Stack {
+	struct Link{
+		void* data;
+		Link* next;
+		void initialize(void* dat, Link* nxt);
+	}* head;
+	void initialize();
+	void push(void* dat);
+	void* peek();
+	void* pop();
+	void cleanup();
+};
+
 void Stack::Link::initialize(void* dat, Link* nxt){
 	data = dat;
 	next = nxt;
