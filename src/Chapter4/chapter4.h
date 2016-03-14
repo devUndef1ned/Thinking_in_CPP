@@ -44,6 +44,7 @@ void exc4_7();
 void exc4_8();
 void exc4_13();
 void exc4_18();
+void exc4_24();
 
 
 

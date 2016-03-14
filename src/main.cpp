@@ -11,7 +11,7 @@
 int main(){
 
 	//exc4_13();
-	exc4_18();
+	exc4_24();
 
 	return 0;
 }
