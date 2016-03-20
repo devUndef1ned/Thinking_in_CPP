@@ -39,9 +39,25 @@ public:
 	void setDataOfA(int i, A& a);
 };
 
+class StackOfInt{
+public:
+	void initialize();
+	int getCurrentIndex();
+	int push(int);
+	int pop();
+private:
+	int index;
+	const static int STACK_SIZE = 100;
+	friend class StackImpl1;
+	friend class StackImpl2;
+	StackImpl1* stack1;
+	StackImpl2* stack2;
+};
+
 
 
 void exc5_5();
+void exc5_14();
 
 
 #endif /* CHAPTER5_CHAPTER5_H_ */
