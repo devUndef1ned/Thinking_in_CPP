@@ -39,15 +39,21 @@ public:
 	void setDataOfA(int i, A& a);
 };
 
+
+class StackImpl1;
+class StackImpl2;
+
 class StackOfInt{
 public:
+	StackOfInt(int size);
+	~StackOfInt();
 	void initialize();
 	int getCurrentIndex();
-	int push(int);
+	void push(int);
 	int pop();
 private:
 	int index;
-	const static int STACK_SIZE = 100;
+	int STACK_SIZE;
 	friend class StackImpl1;
 	friend class StackImpl2;
 	StackImpl1* stack1;
