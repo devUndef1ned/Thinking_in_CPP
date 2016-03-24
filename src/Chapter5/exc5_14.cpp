@@ -18,16 +18,23 @@ void exc5_14(){
 	StackOfInt* stack = new StackOfInt(10);
 	stack->initialize();
 
+	int result = -1;
+	int index = -1;
+
 	for (int i = 0; i <= 10; ++i){
-		stack->push(i*i*10);
+		stack->push(i);
 	}
 
 	for (int i = 0; i <= 10; ++i){
 
-		int result = stack->pop();
-		int index = stack->getCurrentIndex() + 1;
+		result = stack->pop();
 
-		cout << "For data from stack with index " << index << " data is " << result << endl;
+		if (result != -1) {
+
+			index = stack->getCurrentIndex() + 1;
+
+			cout << "For data from stack with index " << index << " data is " << result << endl;
+		}
 	}
 
 	delete stack;
@@ -60,6 +67,8 @@ class StackImpl1{
 
 		int result = arr[index];
 		--index;
+
+		return result;
 	}
 
 	int getIndex(){
@@ -91,9 +100,11 @@ class StackImpl2{
 	int pop(){
 
 
-		int result = arr[index];
+		int result = arr.back();
 		--index;
 		arr.pop_back();
+
+		return result;
 	}
 
 	int getIndex(){
@@ -128,8 +139,8 @@ int StackOfInt::pop(){
 	if (this->getCurrentIndex() == 0)
 		cout << "Stack is empty. There is nothing for pop" << endl;
 	else {
-	result = stack1->pop();
-	stack2->pop();
+	result = stack2->pop();
+	stack1->pop();
 	}
 
 	return result;
