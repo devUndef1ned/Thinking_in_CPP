@@ -8,10 +8,12 @@
 #include "Chapter3/chapter3.h"
 #include "Chapter4/chapter4.h"
 #include "Chapter5/chapter5.h"
+#include "Chapter7/chapter7.h"
+#include "Chapter8/chapter8.h"
 
 int main(){
 
-	exc5_14();
+	exc8_7();
 
 	return 0;
 }

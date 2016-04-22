@@ -18,6 +18,7 @@ public:
 	Text();
 	Text(char* fileName);
 	~Text();
+	void fill(string& str, char* fileName);
 	string contents();
 
 private:
@@ -36,7 +37,12 @@ Text::Text(char* fileName){
 
 	if(fileStream.is_open()){
 
-		while (getline(fileStream, content));
+
+		string tmp;
+
+		while (getline(fileStream, tmp))
+			content += tmp + " ";
+
 		fileStream.close();
 	}
 }
@@ -51,9 +57,24 @@ string Text::contents(){
 	return content;
 }
 
+void Text::fill(string& str, char* fileName){
+
+	ofstream fout;
+	fout.open(fileName, ios::out);
+	fout << str;
+	fout.close();
+
+}
+
 void exc7_1(){
 
-	char fileName[] = {'someTextFile.txt'};
+	char fileName[] = "E:\\EclipseWorkAround\\Thinking_in_CPP\\src\\Chapter7\\someTextFile.txt";
+	char fileNameForOut[] = "E:\\EclipseWorkAround\\Thinking_in_CPP\\src\\Chapter7\\textForOut.txt";
+	string strForOut = "text for output stream";
+
+	Text* textForOutput = new Text();
+
+	textForOutput->fill(strForOut, fileNameForOut);
 
 	Text* text = new Text(fileName);
 
