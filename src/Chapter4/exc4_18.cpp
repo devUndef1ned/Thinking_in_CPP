@@ -21,8 +21,9 @@ void exc4_18(){
 
 	char* tmp1 = func1(tmp);
 
-	delete tmp;
-	delete tmp1;
+	delete tmp, tmp1;
+
+	cout << "tmp = " << tmp <<", pointer to tmp = " << &tmp << endl;
 
 	cout << "tmp1 = " << tmp1 <<", pointer to tmp1 = " << &tmp1 << endl;
 
