@@ -1,15 +1,20 @@
-src_dir := src/
+exc := exc10_3
 chapter := chapter10
-h_dir := $(src_dir)$(chapter)/
-h_file := $(h_dir)$(chapter).h
-exc := exc10_1
-src_file := $(h_dir)$(exc).cpp
-cpp := g++
+dirs := ./src ./src/$(chapter)
+src_file := $(exc).cpp
+h_file := $(chapter).h
+cc := g++
+VPATH = $(dirs)
 
-Thinking_in_CPP: main $(exc)
+Thinking_in_CPP: main.o $(exc).o
+	$(cc) -o Thinking_in_CPP $^
 
-main: $(src_dir)main.o $(h_file)
-	cpp $(src_dir)main.cpp -o $(src_dir)main.o
+main.o: main.cpp $(h_file)
+	$(cc) -c $< -o $@
 
-$(exc): $(h_dir)$(exc).o $(h_file)
-	cpp $(h_dir)$(exc).cpp -o $(h_dir)$(exc).o
+$(exc).o: $(exc).cpp $(h_file)
+	$(cc) -c $< -o $@
+
+clean:
+	rm -r *.o
+	rm Thinking_in_CPP
